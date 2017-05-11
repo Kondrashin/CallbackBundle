@@ -1,0 +1,5 @@
+<div ng-controller='CallbackFormCtrl'>
+    <button ng-click='toggleModal()'>{% trans %}callback{% endtrans %}</button>
+    <modal-dialog show='modalShown' pathget="{{ path('callback_getform') }}" pathsend="{{ path('callback_sendform') }}">
+    </modal-dialog>
+</div>
