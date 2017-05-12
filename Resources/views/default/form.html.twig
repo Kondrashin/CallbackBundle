@@ -1,0 +1,12 @@
+<div class='ng-modal' ng-show='show'>
+    <div class='ng-modal-overlay' ng-click='hideModal()'></div>
+    <div class='ng-modal-dialog' ng-style='dialogStyle'>
+        <div class='ng-modal-close' ng-click='hideModal()'>X</div>
+        <div class='ng-modal-dialog-content'>
+            {% form_theme form 'bootstrap_3_horizontal_layout.html.twig' %}
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
