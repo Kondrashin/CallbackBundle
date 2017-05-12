@@ -1,0 +1,18 @@
+<div class='ng-modal' ng-show='show'>
+    <div class='ng-modal-overlay' ng-click='hideModal()'></div>
+    <div class='ng-modal-dialog' ng-style='dialogStyle'>
+        <div class='ng-modal-close' ng-click='hideModal()'>X</div>
+        <div class='ng-modal-dialog-content'>
+            <div ng-show="!done">
+                {% form_theme form with ['bootstrap_3_horizontal_layout.html.twig', '@Callback/Form/form_override.html.twig'] %}
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
+            <div ng-show="done" class="text-center">
+                <h1 class="text-center"><span class="label label-success">{% trans %}message_send{% endtrans %}!</span>
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
