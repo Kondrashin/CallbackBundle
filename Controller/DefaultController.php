@@ -5,8 +5,13 @@ namespace CallbackBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+<<<<<<< HEAD
 use CallbackBundle\Entity\Callback;
 use CallbackBundle\Form\CallbackType;
+=======
+use CallbackBundle\Entity\Task;
+use CallbackBundle\Form\TaskType;
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller
@@ -16,22 +21,33 @@ class DefaultController extends Controller
      */
     public function getformAction(Request $request)
     {
+<<<<<<< HEAD
         $task = new Callback();
         $form = $this->createForm(CallbackType::class, $task, array(
             'method' => 'POST',
             'attr' => ['ng-submit' => 'submitForm()']
+=======
+        $task = new Task();
+        $form = $this->createForm(TaskType::class, $task, array(
+            'method' => 'POST',
+            'attr' => ['ng-submit'=>'submitForm()']
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
         ));
 
         return $this->render('@Callback/default/form.html.twig', array(
             'form' => $form->createView()
         ));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
     /**
      * @Route("/sendform", name="callback_sendform")
      */
     public function sendformAction(Request $request)
     {
+<<<<<<< HEAD
         $task = new Callback();
         $form = $this->createForm(CallbackType::class, $task, array(
             'method' => 'POST',
@@ -55,5 +71,25 @@ class DefaultController extends Controller
                 'errors' => $formErrors));
         }
         //return new JsonResponse(array('name'=>$task->getEmail(), 'valid'=>$valid, 'submitted'=>$submitted));
+=======
+        $task = new Task();
+        $form = $this->createForm(TaskType::class, $task, array(
+            'method' => 'POST',
+            'attr' => ['ng-submit'=>'submitForm()']
+        ));
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $sendtask = $this->get('sendtask');
+            $sendtask->sendMessage($task);
+
+            $dbtask = $this->get('dbtask');
+            $dbtask->insertMessage($task);
+        }
+        $data               = file_get_contents("php://input");
+        $dataJsonDecode     = json_decode($data);
+        $message            = $dataJsonDecode->name;
+        return new JsonResponse(array('name'=>$task->getName()));
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
     }
 }

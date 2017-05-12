@@ -1,5 +1,6 @@
 .ng-modal-overlay {
     /* A dark translucent div that covers the whole screen */
+<<<<<<< HEAD
     position: absolute;
     z-index: 9999;
     top: -1000px;
@@ -13,6 +14,20 @@
 .ng-modal-dialog {
     /* A centered div above the overlay with a box shadow. */
     z-index: 10000;
+=======
+    position:absolute;
+    z-index:9999;
+    top:-1000px;
+    left:-1000px;
+    width:3000px;
+    height:3000px;
+    background-color:#000000;
+    opacity: 0.8;
+}
+.ng-modal-dialog {
+    /* A centered div above the overlay with a box shadow. */
+    z-index:10000;
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
     position: absolute;
     width: 600px; /* Default */
 
@@ -27,6 +42,7 @@
     box-shadow: 4px 4px 80px #000;
     border-radius: 5px;
 }
+<<<<<<< HEAD
 
 .ng-modal-dialog-content {
     padding: 10px;
@@ -34,6 +50,13 @@
     text-align: left;
 }
 
+=======
+.ng-modal-dialog-content {
+    padding:10px;
+    padding-top:40px;
+    text-align: left;
+}
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
 .ng-modal-close {
     position: absolute;
     top: 0px;
@@ -44,8 +67,11 @@
     display: inline-block;
     font-weight: bold;
     font-family: 'arial', 'sans-serif';
+<<<<<<< HEAD
 }
 
 .error {
     color: red;
+=======
+>>>>>>> f51e16dc6e2782d8a6ee012b018271637e2f54b8
 }
