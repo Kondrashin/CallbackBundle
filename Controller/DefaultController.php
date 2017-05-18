@@ -1,12 +1,12 @@
 <?php
 
-namespace CallbackBundle\Controller;
+namespace Kondrashin\CallbackBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use CallbackBundle\Entity\Task;
-use CallbackBundle\Form\TaskType;
+use Kondrashin\CallbackBundle\Entity\Task;
+use Kondrashin\CallbackBundle\Form\TaskType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DefaultController extends Controller

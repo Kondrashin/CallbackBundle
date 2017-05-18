@@ -1,5 +1,5 @@
 <?php
-namespace CallbackBundle\Entity;
+namespace Kondrashin\CallbackBundle\Entity;
 
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;

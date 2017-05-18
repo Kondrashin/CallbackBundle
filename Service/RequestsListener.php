@@ -1,6 +1,6 @@
 <?php
 
-namespace CallbackBundle\Service;
+namespace Kondrashin\CallbackBundle\Service;
 
 
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;

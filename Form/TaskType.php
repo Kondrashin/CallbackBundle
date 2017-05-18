@@ -1,5 +1,5 @@
 <?php
-namespace CallbackBundle\Form;
+namespace Kondrashin\CallbackBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

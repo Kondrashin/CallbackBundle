@@ -1,5 +1,5 @@
 <?php
-namespace CallbackBundle\Twig;
+namespace Kondrashin\CallbackBundle\Twig;
 
 class CallbackExtension extends \Twig_Extension
 {
