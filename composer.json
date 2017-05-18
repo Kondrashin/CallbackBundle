@@ -1,7 +1,7 @@
 {
     "name": "kondrashin/callback-bundle",
     "description": "Integrates Callback into Symfony2",
-    "version" : "1.0.1",
+    "version" : "1.0.3",
     "homepage": "https://github.com/Kondrashin/CallbackBundle",
     "type": "symfony-bundle",
     "license": "MIT",
